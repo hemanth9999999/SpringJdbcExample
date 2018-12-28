@@ -23,7 +23,7 @@ public class JdbcExampleApplication {
 		
 		Map.Entry<String , Integer > entry = first.entrySet().iterator().next() ; 
 		Integer value = entry.getValue();
-		 
+		  
 		System.out.println("value is " + value);
 		System.out.println(first.get(entry.getKey())) ; 
 		System.out.println(bean1.getCircleName(1));

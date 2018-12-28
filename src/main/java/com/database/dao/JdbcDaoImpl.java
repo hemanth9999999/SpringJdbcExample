@@ -37,7 +37,7 @@ public class JdbcDaoImpl<T> {
 		return (circle) template.queryForObject(Sql, new Object[] {id}, new CircleMapper()) ;
 		
 		
-	}
+	} 
 	
 	public List<circle> getAllCircles(){
 		String Sql = "select * from Circle" ; 
