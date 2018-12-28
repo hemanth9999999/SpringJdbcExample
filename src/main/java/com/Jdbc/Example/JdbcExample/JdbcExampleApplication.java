@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
+import com.Example.JdbcModels.circle;
 import com.database.dao.JdbcDaoImpl;
 @ComponentScan({"com.database.dao","com.Example.jdbcConnection" , "com.Example.JdbcModels","com.Jdbc.Example.JdbcExample"})
 @SpringBootApplication
@@ -27,7 +28,9 @@ public class JdbcExampleApplication {
 		System.out.println(first.get(entry.getKey())) ; 
 		System.out.println(bean1.getCircleName(1));
 		System.out.println(bean1.getCircle(1));
-		System.out.println(bean1.getAllCircle());
+		System.out.println(bean1.getAllCircles());
+		//System.out.println(bean1.putCircle(new circle(3,"third circle")));
+
 		
 		
 	}

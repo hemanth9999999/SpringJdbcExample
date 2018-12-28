@@ -39,9 +39,23 @@ public class JdbcDaoImpl<T> {
 		
 	}
 	
-	public List<circle> getAllCircle(){ 
-		String Sql = "select * from circle " ; 
-		return  (List<circle>) template.queryForObject(Sql, new CircleMapper()) ; 
+	public List<circle> getAllCircles(){
+		String Sql = "select * from Circle" ; 
+		List<circle>c = template.query(Sql, new CircleMapper()) ; 
+		return c ; 
+	}
+	
+
+	public circle putCircle(circle c) { 
+		
+		String Sql = "insert into circle values (? , ? ) "; 
+		Integer ret = template.update(Sql, new Object[] {c.getId(),c.getName()}) ;
+		if (ret>0) {
+			return c  ;
+		}else
+		{ 
+			return null ; 
+		}
 		
 	}
 	
